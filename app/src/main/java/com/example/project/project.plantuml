@@ -1,0 +1,508 @@
+@startuml
+
+title __PROJECT's Class Diagram__\n
+
+  namespace com.example.project {
+    class com.example.project.AddProductActivity {
+        - btnAddProduct : Button
+        - etPrice : EditText
+        - etProductName : EditText
+        - etSuperAddress : EditText
+        - integrityCheck : boolean
+        + onClick()
+        + onCreateOptionsMenu()
+        + onOptionsItemSelected()
+        # onCreate()
+        - integrityCheck()
+    }
+  }
+  
+
+  namespace com.example.project {
+    class com.example.project.AddSuperActivity {
+        - arraySuperMarketsIcon : int[]
+        - editTextAddress : EditText
+        - icon : int
+        + onClick()
+        + onCreate()
+        + onCreateOptionsMenu()
+        + onOptionsItemSelected()
+        + onRadioButtonClicked()
+    }
+  }
+  
+
+  namespace com.example.project {
+    class com.example.project.Barcode {
+        + Barcode()
+        {static} + getProductInBarcode()
+    }
+  }
+  
+
+  namespace com.example.project {
+    class com.example.project.BasketList {
+        - product_name : String
+        + BasketList()
+        {static} + basketListProductExist()
+        {static} + getAllBasketListAmount()
+        {static} + getAllBasketListName()
+        {static} + insertBasketList()
+        {static} + insertProductNameBasketList()
+        {static} + removeAllBasketList()
+        {static} + removeSpecificProductBasketList()
+        + toString()
+    }
+  }
+  
+
+  namespace com.example.project {
+    class com.example.project.BasketListActivity {
+        {static} + basketListSuperMarkets : ArrayList<SuperMarket>
+        {static} + productNameArrayList : ArrayList<String>
+        {static} + total_price : double
+        {static} - MY_PERMISSIONS_REQUEST_COARSE_LOCATION : int
+        {static} - MY_PERMISSIONS_REQUEST_FINE_LOCATION : int
+        - btnAffordableBuy : Button
+        - btnResetList : Button
+        {static} - dataArrayListAmount : ArrayList<Integer>
+        {static} - listView : ListView
+        - locationManager : LocationManager
+        {static} - myLocation : Location
+        - productName : String
+        + addProduct()
+        + getList()
+        {static} + getTextEditText()
+        {static} + getTextTextView()
+        + initLocationListener()
+        + onClick()
+        + onCreate()
+        + onCreateOptionsMenu()
+        + onOptionsItemSelected()
+    }
+  }
+  
+
+  namespace com.example.project {
+    class com.example.project.ComparisonActivity {
+        {static} - MY_PERMISSIONS_REQUEST_COARSE_LOCATION : int
+        {static} - MY_PERMISSIONS_REQUEST_FINE_LOCATION : int
+        - locationManager : LocationManager
+        {static} - myLocation : Location
+        {static} - priceAndSuperName : HashMap<String, Double>
+        {static} - productName : String
+        - saleReport : boolean
+        - tvSuper1 : TextView
+        - tvSuper2 : TextView
+        - tvSuper3 : TextView
+        - tvSuper4 : TextView
+        - tvSuper5 : TextView
+        {static} + getMyLocation()
+        {static} + getPriceAndSuperName()
+        {static} + getProductName()
+        + initLocationListener()
+        + onClickMenu()
+        + onClickReport()
+        + onCreateOptionsMenu()
+        + onOptionsItemSelected()
+        # onCreate()
+    }
+  }
+  
+
+  namespace com.example.project {
+    class com.example.project.HashingPassword {
+        {static} + hashPassword()
+    }
+  }
+  
+
+  namespace com.example.project {
+    class com.example.project.ListViewAdapter {
+        - context : Context
+        - listAmount : ArrayList<Integer>
+        - listName : ArrayList<String>
+        + ListViewAdapter()
+        + getCount()
+        + getItem()
+        + getItemId()
+        + getView()
+    }
+  }
+  
+
+  namespace com.example.project {
+    class com.example.project.LogInActivity {
+        - btnLogIn : Button
+        - btnSignUp : Button
+        - checkBox : CheckBox
+        - editor : Editor
+        - image : ImageView
+        - password : TextInputLayout
+        - username : TextInputLayout
+        {static} - usernameText : String
+        - validDetails : boolean
+        + btnLogIn()
+        + getUsername()
+        + onCreate()
+        + signup()
+        - userLogin()
+    }
+  }
+  
+
+  namespace com.example.project {
+    class com.example.project.MainActivity {
+        - btnMoveToBasket : Button
+        - btnSearchProduct : Button
+        {static} - lengthOfNotifications : int
+        + onClick()
+        + onCreate()
+    }
+  }
+  
+
+  namespace com.example.project {
+    class com.example.project.MainActivity.TimeTickReceiver {
+        + onReceive()
+    }
+  }
+  
+
+  namespace com.example.project {
+    class com.example.project.MapShowActivity {
+        {static} - MY_PERMISSIONS_REQUEST_COARSE_LOCATION : int
+        {static} - MY_PERMISSIONS_REQUEST_FINE_LOCATION : int
+        - locationManager : LocationManager
+        + initLocationListener()
+        + onClick()
+        + onCreateOptionsMenu()
+        + onOptionsItemSelected()
+        # onCreate()
+        # onDestroy()
+    }
+  }
+  
+
+  namespace com.example.project {
+    class com.example.project.MapsFragment {
+        - arrayList : ArrayList<SuperMarket>
+        - callback : OnMapReadyCallback
+        - myPosition : LatLng
+        + MapsFragment()
+        + onCreateView()
+        + onViewCreated()
+        + setMyLocation()
+    }
+  }
+  
+
+  namespace com.example.project {
+    class com.example.project.MyService {
+        - CHANNEL_ID : String
+        - flag : boolean
+        {static} - notificationId : int
+        - notificationManager : NotificationManager
+        - productName : String
+        {static} - toReport : ArrayList<String>
+        + createNotification()
+        + createNotificationChannel()
+        + onBind()
+        + onCreate()
+        + onDestroy()
+        + onStartCommand()
+        + onTaskRemoved()
+        - createForegroundNotification()
+    }
+  }
+  
+
+  namespace com.example.project {
+    class com.example.project.MyService.MyRoutineTask {
+        + run()
+    }
+  }
+  
+
+  namespace com.example.project {
+    class com.example.project.MySql {
+        {static} + DISTANCE_TO_DEGREE : float
+        {static} - BARCODE : String
+        {static} - BASKET_LIST : String
+        {static} - NOTIFICATIONS : String
+        {static} - PRODUCT : String
+        {static} - REPORT : String
+        {static} - SUPER_MARKET : String
+        {static} - TAG : String
+        {static} - USER_NAME : String
+        {static} - connection : Connection
+        {static} - dbname : String
+        {static} - ip : String
+        {static} - pass : String
+        {static} - user : String
+        {static} + barcodeExist()
+        {static} + barcodeExists()
+        {static} + basketListProductExist()
+        {static} + blockFromPermission()
+        {static} + canReport()
+        {static} + checkLengthNotifications()
+        {static} + connect()
+        {static} + countWhoAdd()
+        {static} + createBarcodeTable()
+        {static} + createBasketListTable()
+        {static} + createNotificationTable()
+        {static} + createProductTable()
+        {static} + createReportTable()
+        {static} + createSuperMarketTable()
+        {static} + createUserTable()
+        {static} + disconnect()
+        {static} + dropTableSuper()
+        {static} + executeSql()
+        {static} + getAddressNameLocation()
+        {static} + getAddressNamePrice()
+        {static} + getAllBarcodes()
+        {static} + getAllBasketList()
+        {static} + getAllBasketListAmount()
+        {static} + getAllBasketListName()
+        {static} + getAllNotifications()
+        {static} + getAllPricesOfProduct()
+        {static} + getAllProducts()
+        {static} + getAllReports()
+        {static} + getAllSuperMarkets()
+        {static} + getAllSuperMarketsLocation()
+        {static} + getAllUsers()
+        {static} + getPriceByProduct()
+        {static} + getProductInBarcode()
+        {static} + getProductNameFromSpecificRowNotifications()
+        {static} + getProductWithPrice()
+        {static} + getResultSet()
+        {static} + getSuperMarketByLocation()
+        {static} + getSuperMarketsInRadius()
+        {static} + getWhoAdd()
+        {static} + insertBarcode()
+        {static} + insertBasketList()
+        {static} + insertLogIn()
+        {static} + insertNotifications()
+        {static} + insertProduct()
+        {static} + insertProductNameBasketList()
+        {static} + insertReports()
+        {static} + insertSuper()
+        {static} + productExist()
+        {static} + productExistByLocation()
+        {static} + removeAllBarcodes()
+        {static} + removeAllBasketList()
+        {static} + removeAllProducts()
+        {static} + removeAllSuperMarkets()
+        {static} + removeAllUsers()
+        {static} + removeBarcode()
+        {static} + removeSpecificProductBasketList()
+        {static} + superExists()
+        {static} + updateBasketList()
+        {static} + updateProduct()
+        {static} + usernameAndPasswordExists()
+        {static} + usernameExists()
+    }
+  }
+  
+
+  namespace com.example.project {
+    class com.example.project.Navigator {
+        - address : String
+        - geocoder : Geocoder
+        - latitude : double
+        - longitude : double
+        + Navigator()
+        + getLatitude()
+        + getLongitude()
+    }
+  }
+  
+
+  namespace com.example.project {
+    class com.example.project.Navigator.NavigatorThread {
+        + run()
+    }
+  }
+  
+
+  namespace com.example.project {
+    class com.example.project.Notifications {
+        {static} + checkLengthNotifications()
+        {static} + getProductNameFromSpecificRowNotifications()
+        {static} + insertNotifications()
+    }
+  }
+  
+
+  namespace com.example.project {
+    class com.example.project.Product {
+        - price : double
+        - productName : String
+        + Product()
+        {static} + getAddressNameLocation()
+        {static} + getAllPricesOfProduct()
+        {static} + getAllProducts()
+        + getPrice()
+        {static} + getPriceByProduct()
+        + getProductName()
+        {static} + getWhoAdd()
+        {static} + insertProduct()
+        {static} + productExistByLocation()
+        + setPrice()
+        + setProductName()
+        {static} + updateProduct()
+    }
+  }
+  
+
+  namespace com.example.project {
+    class com.example.project.Report {
+        {static} + countWhoAdd()
+        {static} + insertReports()
+    }
+  }
+  
+
+  namespace com.example.project {
+    class com.example.project.ReportActivity {
+        - editTextUpdate : EditText
+        - location : String
+        {static} - productName : String
+        - row_num : int
+        {static} + getProductName()
+        + onClick()
+        + onCreate()
+        + onCreateOptionsMenu()
+        + onOptionsItemSelected()
+    }
+  }
+  
+
+  namespace com.example.project {
+    class com.example.project.ResultActivity {
+        - super_name : String
+        - total_price : double
+        + onClickResult()
+        + onCreateOptionsMenu()
+        + onOptionsItemSelected()
+        # onCreate()
+    }
+  }
+  
+
+  namespace com.example.project {
+    class com.example.project.ScannerProduct {
+        {static} - REQUEST_CAMERA_PERMISSION : int
+        - barcodeData : String
+        - barcodeText : TextView
+        - cameraSource : CameraSource
+        - surfaceView : SurfaceView
+        - toneGen1 : ToneGenerator
+        - whichScreen : int
+        + onCreate()
+        # onPause()
+        # onResume()
+        - initialiseDetectorsAndSources()
+    }
+  }
+  
+
+  namespace com.example.project {
+    class com.example.project.SearchProductActivity {
+        {static} + adapter : ArrayAdapter<String>
+        {static} + arrayList : ArrayList<String>
+        - btnAddToRepository : Button
+        - listView : ListView
+        + onClick()
+        + onCreate()
+        + onCreateOptionsMenu()
+        + onOptionsItemSelected()
+    }
+  }
+  
+
+  namespace com.example.project {
+    class com.example.project.SignUpActivity {
+        - btnLogin : Button
+        - btnSignUp : Button
+        - image : ImageView
+        - password1 : TextInputLayout
+        - password2 : TextInputLayout
+        - username : TextInputLayout
+        - validDetails : boolean
+        + btnAlreadySignUp()
+        + btnSignup()
+        # onCreate()
+        - integrityCheck()
+    }
+  }
+  
+
+  namespace com.example.project {
+    class com.example.project.SuperMarket {
+        - icon : int
+        - latitude : double
+        - location : LatLng
+        - longitude : double
+        - name : String
+        + SuperMarket()
+        {static} + findSuperMarkets()
+        {static} + findSuperMarketsWithMostProducts()
+        {static} + getAllSuperMarkets()
+        + getIcon()
+        + getLatitude()
+        + getLocation()
+        + getLongitude()
+        + getName()
+        {static} + getSuperMarketByLocation()
+        {static} + getSuperMarketsInRadius()
+        {static} + insertSuper()
+        + setLocation()
+        + setName()
+        {static} + superExists()
+    }
+  }
+  
+
+  namespace com.example.project {
+    class com.example.project.User {
+        {static} + blockFromPermission()
+        {static} + canReport()
+        {static} + insertLogIn()
+        {static} + usernameAndPasswordExists()
+        {static} + usernameExists()
+    }
+  }
+  
+
+  com.example.project.AddProductActivity -up-|> androidx.appcompat.app.AppCompatActivity
+  com.example.project.AddSuperActivity -up-|> androidx.appcompat.app.AppCompatActivity
+  com.example.project.BasketListActivity -up-|> androidx.appcompat.app.AppCompatActivity
+  com.example.project.BasketListActivity o-- com.example.project.ListViewAdapter : adapter
+  com.example.project.ComparisonActivity -up-|> androidx.appcompat.app.AppCompatActivity
+  com.example.project.ListViewAdapter -up-|> android.widget.BaseAdapter
+  com.example.project.LogInActivity -up-|> androidx.appcompat.app.AppCompatActivity
+  com.example.project.MainActivity -up-|> androidx.appcompat.app.AppCompatActivity
+  com.example.project.MainActivity +-down- com.example.project.MainActivity.TimeTickReceiver
+  com.example.project.MainActivity.TimeTickReceiver -up-|> android.content.BroadcastReceiver
+  com.example.project.MapShowActivity -up-|> androidx.appcompat.app.AppCompatActivity
+  com.example.project.MapShowActivity o-- com.example.project.MapsFragment : mapsFragment
+  com.example.project.MapsFragment -up-|> androidx.fragment.app.Fragment
+  com.example.project.MyService -up-|> android.app.Service
+  com.example.project.MyService +-down- com.example.project.MyService.MyRoutineTask
+  com.example.project.Navigator +-down- com.example.project.Navigator.NavigatorThread
+  com.example.project.ReportActivity -up-|> androidx.appcompat.app.AppCompatActivity
+  com.example.project.ResultActivity -up-|> androidx.appcompat.app.AppCompatActivity
+  com.example.project.ScannerProduct -up-|> androidx.appcompat.app.AppCompatActivity
+  com.example.project.SearchProductActivity -up-|> androidx.appcompat.app.AppCompatActivity
+  com.example.project.SignUpActivity -up-|> androidx.appcompat.app.AppCompatActivity
+
+
+right footer
+
+
+PlantUML diagram generated by SketchIt! (https://bitbucket.org/pmesmeur/sketch.it)
+For more information about this tool, please contact philippe.mesmeur@gmail.com
+endfooter
+
+@enduml

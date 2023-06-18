@@ -1,0 +1,370 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/blur_background"
+    tools:context=".ComparisonActivity">
+
+    <TableLayout
+        android:id="@+id/TableComparasion"
+        android:layout_width="412dp"
+        android:layout_height="320dp"
+        android:layout_margin="200dp"
+        android:background="#00000000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints">
+
+        <!-- Table Heading -->
+
+        <TableRow android:background="@color/black">
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:padding="10sp"
+                android:text="Price"
+                android:textColor="@android:color/white"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:padding="10sp"
+                android:text="Super"
+                android:textColor="@android:color/white"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:gravity="center_horizontal"
+                android:padding="10sp"
+                android:text="Report on details"
+                android:textColor="@android:color/white"
+                android:textSize="14sp" />
+
+
+        </TableRow>
+
+        <!-- Table Data -->
+
+        <TableRow>
+
+
+            <TextView
+                android:id="@+id/price1"
+                android:layout_width="20dp"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:padding="10sp"
+                android:tag="2"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/super1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:padding="10sp"
+                android:tag="2"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/report1"
+                android:layout_width="2dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:background="@drawable/roundedbutton"
+                android:backgroundTint="#0A80A5"
+                android:fontFamily="@font/aldrich"
+                android:gravity="center_horizontal"
+                android:onClick="onClickReport"
+                android:padding="10sp"
+                android:tag="1"
+                android:text="report"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                android:visibility="invisible"
+                app:flow_verticalAlign="center" />
+
+            <CheckBox
+                android:id="@+id/checkBoxReport1"
+                android:visibility="invisible"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:text="" />
+
+        </TableRow>
+
+        <TableRow>
+
+
+            <TextView
+                android:id="@+id/price2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:padding="10sp"
+                android:tag="2"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/super2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:padding="10sp"
+                android:tag="2"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/report2"
+                android:layout_width="2dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:background="@drawable/roundedbutton"
+                android:backgroundTint="#0A80A5"
+                android:fontFamily="@font/aldrich"
+                android:gravity="center_horizontal"
+                android:onClick="onClickReport"
+                android:padding="10sp"
+                android:tag="2"
+                android:text="report"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                android:visibility="invisible"
+                app:flow_verticalAlign="center" />
+
+            <CheckBox
+                android:id="@+id/checkBoxReport2"
+                android:layout_width="60dp"
+                android:layout_height="62dp"
+                android:text=""
+                android:visibility="invisible" />
+
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:id="@+id/price3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:padding="10sp"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/super3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:padding="10sp"
+                android:tag="3"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/report3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:background="@drawable/roundedbutton"
+                android:backgroundTint="#0A80A5"
+                android:fontFamily="@font/aldrich"
+                android:gravity="center_horizontal"
+                android:onClick="onClickReport"
+                android:padding="10sp"
+                android:tag="3"
+                android:text="Report"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                android:visibility="invisible"
+                app:flow_verticalAlign="center" />
+
+            <CheckBox
+                android:id="@+id/checkBoxReport3"
+                android:visibility="invisible"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:text="" />
+
+
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:id="@+id/price4"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:padding="10sp"
+                android:tag="4"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/super4"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:padding="10sp"
+                android:tag="4"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/report4"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:background="@drawable/roundedbutton"
+                android:backgroundTint="#0A80A5"
+                android:fontFamily="@font/aldrich"
+                android:gravity="center_horizontal"
+                android:onClick="onClickReport"
+                android:padding="10sp"
+                android:tag="4"
+                android:text="Report"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                android:visibility="invisible"
+                app:flow_verticalAlign="center" />
+
+            <CheckBox
+                android:id="@+id/checkBoxReport4"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:visibility="invisible"
+                android:text="" />
+
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:id="@+id/price5"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:padding="10sp"
+                android:tag="5"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/super5"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:padding="10sp"
+                android:tag="5"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/report5"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:background="@drawable/roundedbutton"
+                android:backgroundTint="#0A80A5"
+                android:fontFamily="@font/aldrich"
+                android:gravity="center_horizontal"
+                android:padding="10sp"
+                android:tag="5"
+                android:onClick="onClickReport"
+                android:text="Report"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                android:visibility="invisible"
+                app:flow_verticalAlign="center" />
+
+            <CheckBox
+                android:id="@+id/checkBoxReport5"
+                android:visibility="invisible"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:text="" />
+
+        </TableRow>
+
+    </TableLayout>
+
+    <TextView
+        android:id="@+id/textViewCheckBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Check the check box if there are details about the product that are false"
+        android:textColor="@color/black"
+        android:textSize="13dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.244" />
+
+    <TextView
+        android:id="@+id/textViewProductName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Product name: "
+        android:textColor="@color/black"
+        android:textSize="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.037" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/backMenu"
+        android:layout_width="277dp"
+        android:layout_height="49dp"
+        android:background="@drawable/roundedbutton"
+        android:fontFamily="@font/aldrich"
+        android:gravity="center_horizontal"
+        android:onClick="onClickMenu"
+        android:padding="15sp"
+        android:tag="1"
+        android:text="Go back to menu page"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        app:flow_verticalAlign="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.91"
+        tools:ignore="MissingConstraints" />
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/barrier2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="left" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
